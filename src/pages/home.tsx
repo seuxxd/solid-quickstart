@@ -6,27 +6,36 @@ export default function Home() {
   return (
     <section class="bg-slate-200 text-slate-700 p-8 rounded-md">
       <h2 class="text-2xl">Home</h2>
-      <p class="mt-4">This is the home page.</p>
-
-      <div class="flex items-center space-x-2 mt-4">
-        <button
-          type="button"
-          class="border rounded-lg px-2 border-slate-900"
-          onClick={() => setCount(count() - 1)}
-        >
-          -
-        </button>
-
-        <output class="p-10px">Count: {count()}</output>
-
-        <button
-          type="button"
-          class="border rounded-lg px-2 border-slate-900"
-          onClick={() => setCount(count() + 1)}
-        >
-          +
-        </button>
-      </div>
+      <qa-router-button
+        data-package-name="com.clothes.new"
+        data-page="/"
+        data-params="{}"
+        data-design-params='{"fontSize": 100,"designWidth": 1080}'
+        data-click-event='{"eventName": "handleClickEvent", "eventParams": "anyString"}'
+        data-expose-event='{"eventName": "handleExposeEvent", "eventParams": "anyString"}'
+        style="margin:auto; width: 100%; height: 40rem;"
+      >
+          <div class="cell">
+            <button>点击打开新衣</button>
+          </div>
+      </qa-router-button>
+      <p>分割</p>
+      <p>分割</p>
+      <p>分割</p>
+      <p>分割</p>
+      <qa-router-button
+        data-package-name="com.shoes.fashion"
+        data-page="/"
+        data-params="{}"
+        data-design-params='{"fontSize": 100,"designWidth": 1080}'
+        data-click-event='{"eventName": "handleClickEvent", "eventParams": "anyString"}'
+        data-expose-event='{"eventName": "handleExposeEvent", "eventParams": "anyString"}'
+        style="margin:auto; width: 100%; height: 40rem;"
+      >
+          <div class="cell">
+            <button>点击打开潮鞋</button>
+          </div>
+      </qa-router-button>
     </section>
   );
 }
